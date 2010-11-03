@@ -54,7 +54,6 @@ exports.request = function request(options) {
       , url: url
       , headers: headers
       , data: data
-      , message: message
       , method: method
       , status: xhr.status
       , xhr: xhr
