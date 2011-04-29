@@ -1,9 +1,10 @@
 {
   "name": "promised-http",
-  "version": "0.0.2",
+  "id": "promised-http",
+  "version": "0.1.0",
   "description": "Promised based http library.",
   "homepage": "http://github.com/Gozala/promised-http/",
-  "keywords": ["promise", "q", "http"],
+  "keywords": [ "promise", "q", "http" ],
   "contributors": ["Irakli Gozalishvili <rfobic@gmail.com> (http://jeditoolkit.com)"],
   "repository": {
     "type": "git",
@@ -20,15 +21,15 @@
     "teleport": ">=0.2.0"
   },
   "dependencies": {
-    "q": ">=0.1.0"
+    "q": ">=0.1.0",
+    "url": ">=0.0.1"
   },
-  "main": "promised-http",
+  "directories": {
+    "lib": "./"
+  },
   "overlay": {
     "teleport": {
-      "directories": {
-        "lib": "./engines/teleport"
-      },
-      "main": "./engines/teleport/promised-http"
+      "main": "./index.teleport.js"
     }
   },
   "licenses": [{
