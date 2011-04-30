@@ -51,7 +51,7 @@ Options = (options)->
   url = options.url = format uri
   { port, hostname, host, protocol, pathname, query, hash } = uri
 
-  secure = protocol is 'http:'
+  secure = protocol is 'https:'
 
   path = options.path = if pathname then pathname else '/'
   host = options.host = hostname if not options.host
