@@ -51,7 +51,7 @@ Options = (options)->
   secure = protocol is 'https:'
 
   path = options.path = if pathname then pathname else '/'
-  host = options.host = hostname if not options.host
+  host = options.host = hostname if not host
 
   # Falling back to 'GET' method if nothing is provided.
   method = options.method = GET if not method
@@ -61,7 +61,7 @@ Options = (options)->
   # If headers are not passed creating a defaults.
   options.headers = headers = {} if not headers
   headers.Host = host if not headers.Host
-  headers.Host += ":#{port}" if port
+  headers.Host += ":#{port}" if hots and port
   headers.Accept = '*/*' if not headers.Accept
 
   if json
