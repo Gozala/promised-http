@@ -1,6 +1,5 @@
 'use strict'
 
-{ parse, format } = require 'url'
 { parse, URL } = require 'url'
 # workaround for jetpack
 parse = URL if URL
@@ -42,13 +41,11 @@ toMultiPart = (data)->
 # Normalize options passed to the request.
 Options = (options)->
   options = { url: options } if typeof options is 'string'
-  console.log options
   { headers, method, message, data, body, json, multipart, uri, url } = options
 
   # Normalizing `uri` property or falling back to `url` if not provided.
   uri = options.uri = url if not uri
   uri = options.uri = parse uri if typeof uri is 'string'
-  url = options.url = format uri
   { port, hostname, host, protocol, pathname, query, hash } = uri
 
   secure = protocol is 'https:'
