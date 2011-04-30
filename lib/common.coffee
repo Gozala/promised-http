@@ -1,6 +1,9 @@
 'use strict'
 
 { parse, format } = require 'url'
+{ parse, URL } = require 'url'
+# workaround for jetpack
+parse = URL if URL
 
 POST = 'POST'
 GET = 'GET'
